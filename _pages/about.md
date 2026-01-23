@@ -7,33 +7,11 @@ classes: wide
 ---
 
 # Zhengquan Zhou  
-### Marine ecology & experimental biophysics of benthic systems
+### Environmental variability · benthic ecosystems · marine heatwaves
 
-<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:14px; margin: 18px 0 10px 0;">
+I study how **temporal structure of environmental extremes** shapes **benthic invertebrate performance and variability**, combining **mesocosm experiments**, **behavioural/physiological measurements**, and **mechanistic/statistical modelling**.
 
-<div class="notice--primary" style="padding:16px; border-radius:14px;">
-  <strong>🔥 Marine heatwaves</strong><br>
-  How timing, duration, and variability shape physiological and behavioural outcomes.
-</div>
-
-<div class="notice--info" style="padding:16px; border-radius:14px;">
-  <strong>⚙️ Behaviour–sediment coupling</strong><br>
-  Quantifying bioturbation processes and feedbacks on tidal flats.
-</div>
-
-<div class="notice--success" style="padding:16px; border-radius:14px;">
-  <strong>📈 Variability & predictability</strong><br>
-  Linking environmental variance to response variance (CV/TVI-style metrics).
-</div>
-
-<div class="notice--warning" style="padding:16px; border-radius:14px;">
-  <strong>🧰 Experiments + modelling</strong><br>
-  Mesocosms, thermal profiles, trait variability, reproducible analysis pipelines.
-</div>
-
-</div>
-
-<div style="display:flex; gap:12px; flex-wrap:wrap; margin: 10px 0 16px 0;">
+<div style="display:flex; gap:12px; flex-wrap:wrap; margin: 14px 0 22px 0;">
   <a class="btn btn--primary" href="/about/">About</a>
   <a class="btn btn--success" href="/publications/">Publications</a>
   <a class="btn btn--info" href="/lab-notes/">Lab Notes</a>
@@ -42,10 +20,12 @@ classes: wide
 
 ---
 
-## Latest lab notes
-{% assign labs = site.posts | where_exp: "post", "post.tags contains 'lab-notes'" %}
-{% for post in labs limit:3 %}
-- **[{{ post.title }}]({{ post.url }})** <small>({{ post.date | date: "%Y-%m-%d" }})</small>
-{% endfor %}
+## Current focus
+- **Marine heatwaves**: mean responses *and* response variability
+- **Behaviour–sediment coupling**: bioturbation and sediment stability
+- **Benthic resilience** under fluctuating temperature regimes
 
-<small>Tip: tag your posts with <code>lab-notes</code> to show up here.</small>
+## What you’ll find here
+- **Publications** and ongoing manuscripts  
+- **Lab Notes**: short posts on unpublished progress, figures, and code workflows  
+- **CV** + links to ORCID / Google Scholar / GitHub
