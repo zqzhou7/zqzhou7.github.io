@@ -26,7 +26,7 @@ author:
   avatar           : "profile.JPG"
   name             : "Zhengquan Zhou" # Update with your name
   pronouns         : "He/him"  
-  bio              : "I study how environmental variability shapes benthic ecosystems, using experiments and mechanistic modelling (marine heatwaves, bioturbation, sediment dynamics)."
+  bio              : "I study how environmental variability shapes benthic ecosystems, using experiments and mechanistic modelling."
   location         : "Shenzhen / Hong Kong"
   employer         : # institute or organization
   uri              : # URL
@@ -42,7 +42,7 @@ author:
   semantic         : # URL
   ssrn             : # URL
   pubmed           : # URL
-  researchgate     : "https://www.researchgate.net/profile/Zhengquan-Zhou"
+  researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
 
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "www.linkedin.com/in/zhengquan-zhou-b6394b223"
+  linkedin         : "https://www.linkedin.com/in/zhengquan-zhou-b6394b223"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
