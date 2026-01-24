@@ -40,11 +40,82 @@ redirect_from:
 ---
 
 ## Publications
-<ul>
-{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}
-</ul>
+
+**Zhou, Z.**, Fivash, G. S., Cozzoli, F., Walles, B., Troost, K., Ysebaert, T., & Bouma, T. J. (2025).  
+**Compound extreme events reshuffle the stacked odds in the gamble between native and introduced bivalves.**  
+*Global Ecology and Conservation*, e03918.
+
+**Zhou, Z.**, Fivash, G. S., Cozzoli, F., Walles, B., Troost, K., Ysebaert, T., & Bouma, T. J. (2025).  
+**Bivalve mortality and burrowing behavior under compound stress of salinity and temperature: Data from a mesocosm experiment.**  
+*Data in Brief* (in preparation).
+
+Lehuen, A., Oulhen, R.-M., **Zhou, Z.**, de Smit, J., van IJzerloo, L., Cozzoli, F., Bouma, T. J., & Orvain, F. (2024).  
+**Multispecies macrozoobenthic seasonal bioturbation effect on sediment erodibility.**  
+*Journal of Sea Research*, 201, 102525.
+
+**Zhou, Z.**, Grandjean, T. J., de Smit, J., van Belzen, J., Fivash, G. S., Walles, B., Beauchard, O., van Dalen, J., Blok, D. B., van IJzerloo, L., *et al.* (2024).  
+**Sediment dynamics shape macrofauna mobility traits and abundance on tidal flats.**  
+*Limnology and Oceanography*, 69(10), 2278–2293.
+
+**Zhou, Z.**, Steiner, N., Fivash, G. S., Cozzoli, F., Blok, D. B., van IJzerloo, L., van Dalen, J., Ysebaert, T., Walles, B., & Bouma, T. J. (2023).  
+**Temporal dynamics of heatwaves are key drivers of sediment mixing by bioturbators.**  
+*Limnology and Oceanography*.
+
+**Zhou, Z.** (2023).  
+**Benthic macrofauna under extremes: Unraveling the response strategies from individual behavior to community structure in tidal flats.**  
+PhD Thesis, Utrecht University.
+
+**Zhou, Z.**, Bouma, T. J., Fivash, G. S., Ysebaert, T., van IJzerloo, L., van Dalen, J., van Dam, B., & Walles, B. (2022).  
+**Thermal stress affects bioturbators’ burrowing behavior: A mesocosm experiment on common cockles (*Cerastoderma edule*).**  
+*Science of the Total Environment*, 824, 153621.
+
+Chen, L., Lutaenko, K. A., Li, X., Li, X., **Zhou, Z.**, Li, B., Pavlyuk, O. N., & Tarasova, T. S. (2020).  
+**Long-term changes of marine subtidal benthic communities in North East Asia (Yellow and Japan seas) in a global change context: A review.**  
+*Aquatic Conservation: Marine and Freshwater Ecosystems*, 30(7), 1451–1475.
+
+Li, X., Chen, L., **Zhou, Z.**, Li, B., Liu, X., Yang, L., Liu, B., & Song, B. (2020).  
+**Spatio-temporal variation of subtidal macrobenthic fauna and ecological assessment of Longkou Artificial Island construction in the Bohai Sea, China.**  
+*Journal of Oceanology and Limnology*, 38(6), 1811–1824.
+
+**Zhou, Z.**, Li, X., Chen, L., Li, B., Wang, C., Guo, J., Shi, P., Yang, L., Liu, B., & Song, B. (2019).  
+**Effects of diesel oil spill on macrobenthic assemblages at the intertidal zone: A mesocosm experiment in situ.**  
+*Marine Environmental Research*, 152, 104823.
+
+Yang, L., Chen, L., Li, X., **Zhou, Z.**, Liu, B., Song, B., Li, B., & Li, B. (2019).  
+**Effect of seasonal hypoxia on macrobenthic communities in the Muping Marine Ranch, Yantai, China.**  
+*Biodiversity Science*, 27(2), 200.
+
+Li, B., Bouma, T. J., Wang, Q., Soissons, L. M., Cozzoli, F., Feng, G., Li, X., **Zhou, Z.**, & Chen, L. (2019).  
+**Effects of the mud snail *Bullacta exarata* on oxygen and nutrient fluxes at the sediment–water interface in the Huanghe River Delta, China.**  
+*Acta Oceanologica Sinica*, 38(8), 48–55.
+
+**Zhou, Z.**, Li, X., Chen, L., Li, B., Liu, T., Ai, B., Yang, L., Liu, B., & Chen, Q. (2018).  
+**Macrobenthic assemblage characteristics under stressed waters and ecological health assessment using AMBI and M-AMBI: A case study at the Xin’an River Estuary, Yantai, China.**  
+*Acta Oceanologica Sinica*, 37(5), 77–86.
+
+Li, B., **Zhou, Z.**, Li, B., Wang, Q., Li, X., & Chen, L. (2018).  
+**Size distribution and reproductive cycle of *Asterias amurensis* (Echinodermata: Asteroidea) in China.**  
+*Acta Oceanologica Sinica*, 37(6), 96–103.
+
+Chen, L. L., Wang, Q. C., Li, X. J., **Zhou, Z.**, & Li, B. Q. (2016).  
+**Long-term trends of macrobenthos in the southern Bohai Sea, China.**  
+*Scientia Sinica Vitae*, 46(9), 1121–1134.
+
+Li, X., **Zhou, Z.**, Chen, L., & Li, B. (2016).  
+**Characteristics of macrobenthic communities in the estuary of the Dagujia River and adjacent waters in Yantai, Shandong, China.**  
+*Biodiversity Science*, 24(2), 157–165.
+
+Li, B., Li, X., **Zhou, Z.**, *et al.* (2016).  
+**Ecological effects of reclamation on benthic communities.**  
+*Guangxi Sciences*, 23(4), 293–298.
+
+Li, X., **Zhou, Z.**, Chen, L., Li, B., Liu, T., Ai, B., Yang, L., Liu, B., & Wang, S. (2017).  
+**Effects of coastal reclamation on benthic macrofauna in the Caofeidian coastal area, Bohai Bay, China.**  
+*Oceanologia et Limnologia Sinica*, 48(3), 617–627.
+
+Li, B., Li, X., Bouma, T. J., Soissons, L. M., Cozzoli, F., Wang, Q., **Zhou, Z.**, & Chen, L. (2017).  
+**Analysis of macrobenthic assemblages and ecological health of the Yellow River Delta using AMBI and M-AMBI.**  
+*Marine Pollution Bulletin*, 119(2), 23–32.
 
 ---
 
