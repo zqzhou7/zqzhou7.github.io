@@ -41,19 +41,3 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-
-/* === Fix: footer overlapping / blocking sticky sidebar links === */
-@media (min-width: 1024px) {
-  .sidebar {
-    z-index: 20;                 /* keep sidebar above footer layer */
-    background: #fff;            /* prevents footer text showing through */
-    border-radius: 14px;         /* optional, looks nicer */
-  }
-
-  /* Ensure footer doesn't float above content layers */
-  .page__footer {
-    position: relative;
-    z-index: 1;
-  }
-}
-
