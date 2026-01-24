@@ -26,7 +26,7 @@ author:
   avatar           : "profile.JPG"
   name             : "Zhengquan Zhou" # Update with your name
   pronouns         : "He/him"  
-  bio              : "I study how environmental variability shapes benthic ecosystems, using experiments and mechanistic modelling."
+  bio              : # breif intro
   location         : "Shenzhen / Hong Kong"
   employer         : # institute or organization
   uri              : # URL
