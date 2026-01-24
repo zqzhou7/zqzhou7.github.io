@@ -42,24 +42,18 @@
     "vendor/font-awesome/brands"
 ;
 
-/* =========================================================
-   Custom tweaks (Zhengquan)
-   Keep sidebar fixed while main content scrolls
-   ========================================================= */
-
+/* === Fix: footer overlapping / blocking sticky sidebar links === */
 @media (min-width: 1024px) {
-  /* Sticky author sidebar on desktop */
   .sidebar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1.25rem;               /* space below the top */
-    align-self: start;          /* helps with grid/flex layouts */
-    max-height: calc(100vh - 2.5rem);
-    overflow: auto;             /* if sidebar is tall, it scrolls internally */
+    z-index: 20;                 /* keep sidebar above footer layer */
+    background: #fff;            /* prevents footer text showing through */
+    border-radius: 14px;         /* optional, looks nicer */
   }
 
-  /* Optional: prevent the right content column from overlapping */
-  .page__content {
-    min-width: 0;
+  /* Ensure footer doesn't float above content layers */
+  .page__footer {
+    position: relative;
+    z-index: 1;
   }
 }
+
