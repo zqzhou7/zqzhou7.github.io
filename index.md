@@ -6,8 +6,7 @@ author_profile: true
 classes: wide
 ---
 
-# Zhengquan Zhou  
-### Environmental variability · benthic ecosystems · marine heatwaves
+# Zhengquan Zhou, PhD
 
 I study how **temporal structure of environmental extremes** shapes **benthic invertebrate performance and variability**, combining **mesocosm experiments**, **behavioural/physiological measurements**, and **mechanistic/statistical modelling**.
 
