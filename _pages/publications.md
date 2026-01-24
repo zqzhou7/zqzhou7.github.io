@@ -103,9 +103,9 @@ Chen, L. L., Wang, Q. C., Li, X. J., **Zhou, Z. Q.**, & Li, B. Q.
 **Long-term trends of macrobenthos in southern Bohai Sea.**  
 *Scientia Sinica Vitae*, 46(9), 1121–1134.
 
-李晓静, **周政权**, 陈琳琳, 李宝泉  
-**山东烟台大沽夹河河口及邻近海域大型底栖动物群落特征**  
-*生物多样性*, 24(2), 157–165.
+Li, X., **Zhou, Z.**, Chen, L., & Li, B.  
+**Characteristics of macrobenthic communities in the estuary of the Dagujia River and adjacent waters in Yantai, Shandong, China.**  
+*Biodiversity Science*, 24(2), 157–165.
 
 Li, B., Li, X., **Zhou, Z.**, *et al.*  
 **Ecological effects of reclamation on benthic communities.**  
