@@ -1,7 +1,8 @@
 ---
 title: "[Note] Handling Date-Time Data in R with as.POSIXct()"
 date: 2023-05-20
-categories: [Note]
+categories: [Blog&Notes]
+tags: [Note, R, datetime]
 ---
 
 ## Introduction
