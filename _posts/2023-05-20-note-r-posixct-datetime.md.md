@@ -138,6 +138,6 @@ Common format symbols:
 
 ## Further reading
 
-- lubridate package documentation and cheatsheets
+- [lubridate package documentation and cheatsheets](https://lubridate.tidyverse.org/?sessionid=)
 
 End of note.
