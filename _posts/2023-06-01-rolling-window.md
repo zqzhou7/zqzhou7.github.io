@@ -1,12 +1,17 @@
 ---
-title: "[Note] Rolling Window Analysis in R (Custom Implementation)"
+title: "[Note] Rolling Window Analysis in R"
 date: 2023-06-01
 categories: [Note]
 ---
 
-## Introduction
+*Rolling window analysis is a flexible approach for summarizing relationships in time-ordered or gradient-based data by computing statistics within sliding windows. This note demonstrates a custom implementation in R using the `smoking` dataset to explore how average weekday smoking amounts vary with age.*
+
 
 Rolling window analysis is a way to summarize data by computing statistics within fixed-length windows that slide across an ordered variable. It is useful for checking whether the relationship between a response and an explanatory variable is stable across the range of the data.
+
+[Figure 1. A conceptual figure demonstrating the rolling-window method](/images/notes/rolling_window/sliding_window.png) 
+
+*Figure 1. A conceptual figure demonstrating the rolling-window method.*
 
 Two key parameters define this method:
 
@@ -39,8 +44,9 @@ We visualize the raw relationship:
 
     plot(dt$amt_weekdays ~ dt$age)
 
-Figure 1. Scatter plot of weekday smoking amount versus age.  
-(Insert your figure here.)
+[Figure 2. Scatter plot of weekday smoking amount versus age](/images/notes/rolling_window/raw_plot.png) 
+
+*Figure 2. Scatter plot of weekday smoking amount versus age.*
 
 ---
 
@@ -131,8 +137,9 @@ We plot raw data by gender, then overlay the rolling window averages.
            pch = 16,
            col = c('pink', 'lightblue', 'red'))
 
-Figure 2. Raw smoking data by gender with rolling window averages.  
-(Insert your figure here.)
+[Figure 3. Raw smoking data by gender with rolling window averages.](/images/notes/rolling_window/final_plot.png)
+
+*Figure 3. The rolling window averages.*
 
 ---
 
