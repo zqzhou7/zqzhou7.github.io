@@ -131,7 +131,7 @@ Li, B., Li, X., Bouma, T. J., Soissons, L. M., Cozzoli, F., Wang, Q., **Zhou, Z.
 
 ---
 
-## Internship & Thesis Supervision
+## Co-supervision on Internship & Thesis
 - **Cristian Martin**, Ghent University (2020.01 – 2020.06)  
   *IMBRSea Joint MSc Thesis*
 
