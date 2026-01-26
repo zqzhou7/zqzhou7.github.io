@@ -1,143 +1,155 @@
 ---
-title: "[Note] Handling Date-Time Data in R with as.POSIXct()"
-date: 2023-05-20
-categories: [Blog&Notes]
-tags: [Note, R, datetime]
+title: "[Note] Rolling Window Analysis in R (Custom Implementation)"
+date: 2023-06-01
+categories: [Note]
 ---
 
-*Short note on handling time-series data in R using POSIXct and ggplot2.*
+## Introduction
 
-Time-series data are common in ecological experiments, such as hourly temperature records or interannual biomass variation.
+Rolling window analysis is a way to summarize data by computing statistics within fixed-length windows that slide across an ordered variable. It is useful for checking whether the relationship between a response and an explanatory variable is stable across the range of the data.
 
-In base R, time data are mainly represented in three formats:
+Two key parameters define this method:
 
-- Date: number of days since 1970-01-01  
-- POSIXct: number of seconds since 1970-01-01 (UTC-based)  
-- POSIXlt: list-based structure storing date, time, and timezone  
+- Step size: how far the window moves each iteration
+- Window size: how much data each window contains (its span)
 
-Time objects are usually created by converting character strings using:
+Common statistics include mean, standard deviation, and variance.
 
-- as.Date()  
-- as.POSIXct()  
-- as.POSIXlt()  
-- strptime()  
+The zoo package provides rollapply() for rolling calculations, but writing custom code can be more flexible for specific analysis needs.
 
-The lubridate package also provides convenient tools.
+In this example, we use the smoking dataset from the openintro package to explore the relationship between weekday smoking amount and age.
 
-This note focuses on the basic usage of as.POSIXct().
+Dataset documentation:  
+https://rdrr.io/cran/openintro/man/smoking.html
 
 ---
 
-## Basic syntax
+## Data sorting
 
-    as.POSIXct(x, tz = "", format = "", origin = "", ...)
+We first remove missing values and sort the data by age in ascending order.
 
-Arguments:
+    library(openintro)
 
-- x: object to convert (usually a character string)  
-- tz: timezone (default is system timezone)  
-- format: string format specification  
-- origin: starting date for numeric time values  
+    data(smoking)
 
----
+    dt = smoking[order(smoking$age), ]
+    dt = dt[!is.na(dt$amt_weekdays), ]
 
-## Example 1: Simple conversion
+We visualize the raw relationship:
 
-    t1 = '2022-02-22 22:22:22'
-    class(t1)
+    plot(dt$amt_weekdays ~ dt$age)
 
-    t1 = as.POSIXct(t1)
-    class(t1)
+Figure 1. Scatter plot of weekday smoking amount versus age.  
+(Insert your figure here.)
 
 ---
 
-## Example 2: Specify format
+## Parameter setting
 
-    t2 = '2022/02/22T22:22:22'
-    t2 = as.POSIXct(t2, format = '%Y/%m/%dT%H:%M:%S')
-    t2
+Next, we define the rolling window parameters and prepare a dataframe to store summarized results.
 
-Common format symbols:
+    step.age = 0.1     # step size
+    window.age = 10    # window size
 
-- %y  two-digit year  
-- %Y  four-digit year  
-- %m  month  
-- %d  day  
-- %b  abbreviated month  
-- %B  full month name  
-- %a  abbreviated weekday  
-- %A  full weekday  
+    min.age = min(dt$age)
+    max.age = max(dt$age)
+
+    wm.df = data.frame(wm.age = numeric(0),
+                       wm.amt_wk = numeric(0))
 
 ---
 
-## Example 3: Timezones
+## Writing the loop
 
-    library(lubridate)
+The rolling window algorithm computes statistics inside each window, then shifts forward by the step size.
 
-    t3 <- as.POSIXct('2022-02-23 23:23:23', tz = 'UTC')
-    t3
+Here we compute the mean age and the mean weekday smoking amount within each window.
 
-    t4 <- as.POSIXct('2022-02-24 01:00:00', tz = 'America/New_York')
-    t4
+    i = 0
+    n_step = (max.age - min.age - window.age) / step.age
 
-    with_tz(t4, 'GMT')
+    for (i in 0:n_step) {
+
+      filter.age = dt$age >= (min.age + i * step.age) &
+                   dt$age <= (min.age + i * step.age + window.age)
+
+      sub.dt = dt[filter.age, ]
+
+      wm.age = mean(sub.dt$age)
+      wm.amt_wk = mean(sub.dt$amt_weekdays)
+
+      wm.dt = list(wm.age, wm.amt_wk)
+      wm.df = rbind(wm.df, wm.dt)
+
+      i + 1
+    }
+
+    colnames(wm.df) = c('m.age', 'm.amt_wk')
 
 ---
 
-## Example 4: UNIX time origin
+## Plotting
 
-    t5 = 1645564942
-    as.POSIXct(t5, origin = '1970-01-01')
-    as.POSIXct(t5, origin = '1980-01-01')
+We plot raw data by gender, then overlay the rolling window averages.
 
----
-
-## Plotting date-time data with ggplot2
-
-    library(ggplot2)
     library(scales)
 
-    set.seed(2022)
+    filter_f = dt$gender == 'Female'
+    filter_m = dt$gender == 'Male'
 
-    a = 4
-    b = 7
-    amp = 2
-    n = 7 * 24 * 4
+    dt$color = as.character(dt$gender)
+    dt$color[dt$color == 'Female'] = 'pink'
+    dt$color[dt$color == 'Male'] = 'light blue'
 
-    t = seq(0, 2*pi, , n)
-    h.norm = rnorm(n)
+    plot(dt$age[filter_m], dt$amt_weekdays[filter_m],
+         xlim = c(15, 95), ylim = c(0, 55),
+         xaxt = "none", yaxt = "none",
+         xlab = "", ylab = "",
+         pch = 16,
+         col = alpha(unique(dt$color[filter_m]), 0.5),
+         tcl = 0.3)
 
-    h.temp = a*sin(b*t + 1.5*pi) + h.norm*amp + 25
+    points(dt$age[filter_f], dt$amt_weekdays[filter_f],
+           pch = 16,
+           col = alpha(unique(dt$color[filter_f]), 0.5))
 
-    dt = seq.POSIXt(
-      as.POSIXct("2022-02-01 00:00:00"),
-      as.POSIXct("2022-02-07 23:45:00"),
-      tz = "Europe/Berlin",
-      by = "15 min"
-    )
+    points(wm.df$m.age, wm.df$m.amt_wk,
+           pch = 21, bg = '#FF0033', cex = 2.5)
 
-    df.temp = data.frame(datetime = dt, temptr = h.temp)
+    axis(1, seq(15, 95, 5), las = 1, font = 2)
+    axis(2, seq(0, 55, 5), las = 2, font = 2)
 
-    ggplot(df.temp, aes(x = datetime, y = temptr)) +
-      geom_line(size = 1.5, col = "red") +
-      xlab("Measuring time") +
-      ylab("Measured temperature (°C)") +
-      ylim(15, 35) +
-      scale_x_datetime(
-        labels = date_format("%m/%d/%y"),
-        breaks = date_breaks("1 day")
-      ) +
-      ggtitle("Air temperature variation") +
-      theme(
-        plot.title = element_text(size = 20, face = "bold", hjust = 0.5),
-        axis.title = element_text(size = 15, face = "bold"),
-        axis.text = element_text(size = 12, face = "bold")
-      )
+    mtext(side = 1, line = 2, "Age", font = 2)
+    mtext(side = 2, line = 2, "Number of cigarettes/day", font = 2)
+    mtext(side = 3, line = 1, "Age dependence of smoking amounts",
+          col = "blue", font = 3)
+
+    abline(v = c(62.5, 82.5), lwd = 1.2, lty = 2)
+
+    legend('topleft',
+           legend = c('Female', 'Male', 'Summarized data'),
+           pch = 16,
+           col = c('pink', 'lightblue', 'red'))
+
+Figure 2. Raw smoking data by gender with rolling window averages.  
+(Insert your figure here.)
+
+---
+
+## Interpretation
+
+The rolling window summary suggests:
+
+- Ages 20–60: weekday smoking increases with age
+- Ages 60–80: weekday smoking decreases with age
+- After ~85: weekday smoking drops sharply
+
+This pattern is difficult to see from raw scatter points alone but becomes clear after rolling window smoothing.
 
 ---
 
 ## Further reading
 
-- [lubridate package documentation and cheatsheets](https://lubridate.tidyverse.org/?sessionid=)
+- [rollapply() in the zoo package](https://search.r-project.org/CRAN/refmans/zoo/html/rollapply.html?sessionid=)
 
-End of note.
+END
