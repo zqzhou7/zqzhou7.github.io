@@ -5,7 +5,7 @@ categories: [Blog&Notes]
 tags: [Note, R, datetime]
 ---
 
-## Introduction
+*Short note on handling time-series data in R using POSIXct and ggplot2.*
 
 Time-series data are common in ecological experiments, such as hourly temperature records or interannual biomass variation.
 
