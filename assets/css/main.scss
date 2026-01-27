@@ -41,23 +41,3 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-
-/* ===== Masthead: remove underline from site title only ===== */
-.masthead .site-title,
-.masthead .site-title:visited,
-.masthead .site-title:hover,
-.masthead .site-title:focus {
-  text-decoration: none !important;
-  background-image: none !important;   /* some themes fake underline with bg */
-  box-shadow: none !important;
-}
-
-/* Optional: also remove underline from the small subtitle if your theme uses it */
-.masthead .site-subtitle,
-.masthead .site-subtitle:hover {
-  text-decoration: none !important;
-  background-image: none !important;
-}
-
-/* ===== Keep nav underline behavior (do NOT remove nav styling) ===== */
-/* No change needed here. Home underline/active state remains controlled by theme. */
