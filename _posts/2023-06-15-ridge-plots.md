@@ -1,162 +1,223 @@
 ---
-title: "[Note] Rolling Window Analysis in R"
-date: 2023-06-01
+title: "[Note] Ridgeline Plots in R (ggridges)"
+date: 2023-06-15
 categories: [Note]
 ---
 
-*Rolling window analysis is a flexible approach for summarizing relationships in time-ordered or gradient-based data by computing statistics within sliding windows. This note demonstrates a custom implementation in R using the `smoking` dataset to explore how average weekday smoking amounts vary with age.*
+*Ridgeline plots are a clean way to compare distributions of a continuous variable across multiple groups. This note introduces the `ggridges` package and shows practical options for shaping, spacing, and coloring ridgelines in ggplot2.*
 
+Ridgeline plots (also called joy plots) visualize multiple density curves stacked along a categorical axis. They are especially useful when you want to compare how distributions shift or differ across groups (e.g., treatments, sites, time points).
 
-Rolling window analysis is a way to summarize data by computing statistics within fixed-length windows that slide across an ordered variable. It is useful for checking whether the relationship between a response and an explanatory variable is stable across the range of the data.
+In `ggridges`, two commonly used geoms are:
 
-![Figure 1. A conceptual figure demonstrating the rolling-window method](/images/notes/rolling_window/sliding_window.png) 
-
-*Figure 1. A conceptual figure demonstrating the rolling-window method.*
-
-Two key parameters define this method:
-
-- Step size: how far the window moves each iteration
-- Window size: how much data each window contains (its span)
-
-Common statistics include mean, standard deviation, and variance.
-
-The zoo package provides rollapply() for rolling calculations, but writing custom code can be more flexible for specific analysis needs.
-
-In this example, we use the smoking dataset from the openintro package to explore the relationship between weekday smoking amount and age.
-
-Dataset documentation:  
-https://rdrr.io/cran/openintro/man/smoking.html
+- `geom_density_ridges()` (open ridges)
+- `geom_density_ridges2()` (closed ridges)
 
 ---
 
-## Data sorting
+## Package setup
 
-We first remove missing values and sort the data by age in ascending order.
+    # install.packages("ggridges")
+    library(ggridges)
 
-    library(openintro)
+    # install.packages("ggplot2")
+    library(ggplot2)
 
-    data(smoking)
+We use a small example dataset from `diamonds`:
 
-    dt = smoking[order(smoking$age), ]
-    dt = dt[!is.na(dt$amt_weekdays), ]
-
-We visualize the raw relationship:
-
-    plot(dt$amt_weekdays ~ dt$age)
-
-![Figure 2. Scatter plot of weekday smoking amount versus age](/images/notes/rolling_window/raw_plot.png) 
-
-*Figure 2. Scatter plot of weekday smoking amount versus age.*
+    df <- diamonds[1:100, c("color", "depth")]
 
 ---
 
-## Parameter setting
+## 1) Basic ridgeline plots
 
-Next, we define the rolling window parameters and prepare a dataframe to store summarized results.
+### geom_density_ridges()
 
-    step.age = 0.1     # step size
-    window.age = 10    # window size
+    ggplot(df, aes(x = depth, y = color)) +
+      geom_density_ridges()
 
-    min.age = min(dt$age)
-    max.age = max(dt$age)
+![Figure 1. Ridgeline plot using geom_density_ridges()](/images/notes/ridge_plots/figure1.png)
 
-    wm.df = data.frame(wm.age = numeric(0),
-                       wm.amt_wk = numeric(0))
+*Figure 1. Ridgeline plot created using `geom_density_ridges()`.*
 
----
+### geom_density_ridges2()
 
-## Writing the loop
+`geom_density_ridges2()` produces a similar plot but with closed ridges.
 
-The rolling window algorithm computes statistics inside each window, then shifts forward by the step size.
+    ggplot(df, aes(x = depth, y = color)) +
+      geom_density_ridges2()
 
-Here we compute the mean age and the mean weekday smoking amount within each window.
+![Figure 2. Ridgeline plot using geom_density_ridges2()](/images/notes/ridge_plots/figure2.png)
 
-    i = 0
-    n_step = (max.age - min.age - window.age) / step.age
-
-    for (i in 0:n_step) {
-
-      filter.age = dt$age >= (min.age + i * step.age) &
-                   dt$age <= (min.age + i * step.age + window.age)
-
-      sub.dt = dt[filter.age, ]
-
-      wm.age = mean(sub.dt$age)
-      wm.amt_wk = mean(sub.dt$amt_weekdays)
-
-      wm.dt = list(wm.age, wm.amt_wk)
-      wm.df = rbind(wm.df, wm.dt)
-
-      i + 1
-    }
-
-    colnames(wm.df) = c('m.age', 'm.amt_wk')
+*Figure 2. Ridgeline plot created using `geom_density_ridges2()`.*
 
 ---
 
-## Plotting
+## 2) Key parameters
 
-We plot raw data by gender, then overlay the rolling window averages.
+### Tail trimming: rel_min_height
 
-    library(scales)
+`rel_min_height` controls how much of the density tail is removed. Smaller values keep more of the tail; larger values trim more aggressively.
 
-    filter_f = dt$gender == 'Female'
-    filter_m = dt$gender == 'Male'
+    ggplot(df, aes(x = depth, y = color)) +
+      geom_density_ridges(rel_min_height = 0.005)
 
-    dt$color = as.character(dt$gender)
-    dt$color[dt$color == 'Female'] = 'pink'
-    dt$color[dt$color == 'Male'] = 'light blue'
+![Figure 3. Ridgeline plot with low tail trimming.](/images/notes/ridge_plots/figure3.png)
 
-    plot(dt$age[filter_m], dt$amt_weekdays[filter_m],
-         xlim = c(15, 95), ylim = c(0, 55),
-         xaxt = "none", yaxt = "none",
-         xlab = "", ylab = "",
-         pch = 16,
-         col = alpha(unique(dt$color[filter_m]), 0.5),
-         tcl = 0.3)
+*Figure 3. Low trimming (more tails kept).*
 
-    points(dt$age[filter_f], dt$amt_weekdays[filter_f],
-           pch = 16,
-           col = alpha(unique(dt$color[filter_f]), 0.5))
+    ggplot(df, aes(x = depth, y = color)) +
+      geom_density_ridges(rel_min_height = 0.5)
 
-    points(wm.df$m.age, wm.df$m.amt_wk,
-           pch = 21, bg = '#FF0033', cex = 2.5)
+![Figure 4. Ridgeline plot with strong tail trimming.](/images/notes/ridge_plots/figure4.png)
 
-    axis(1, seq(15, 95, 5), las = 1, font = 2)
-    axis(2, seq(0, 55, 5), las = 2, font = 2)
-
-    mtext(side = 1, line = 2, "Age", font = 2)
-    mtext(side = 2, line = 2, "Number of cigarettes/day", font = 2)
-    mtext(side = 3, line = 1, "Age dependence of smoking amounts",
-          col = "blue", font = 3)
-
-    abline(v = c(62.5, 82.5), lwd = 1.2, lty = 2)
-
-    legend('topleft',
-           legend = c('Female', 'Male', 'Summarized data'),
-           pch = 16,
-           col = c('pink', 'lightblue', 'red'))
-
-![Figure 3. Raw smoking data by gender with rolling window averages.](/images/notes/rolling_window/final_outcome.png)
-
-*Figure 3. The rolling window averages.*
+*Figure 4. Strong trimming (tails cut earlier).*
 
 ---
 
-## Interpretation
+### Ridge spacing: scale
 
-The rolling window summary suggests:
+`scale` controls how much the ridges overlap/stack. Smaller values are more compact; larger values spread ridges vertically.
 
-- Ages 20–60: weekday smoking increases with age
-- Ages 60–80: weekday smoking decreases with age
-- After ~85: weekday smoking drops sharply
+    ggplot(df, aes(x = depth, y = color)) +
+      geom_density_ridges(scale = 1)
 
-This pattern is difficult to see from raw scatter points alone but becomes clear after rolling window smoothing.
+![Figure 5. Ridgeline plot with scale = 1.](/images/notes/ridge_plots/figure5.png)
+
+*Figure 5. Compact ridge spacing.*
+
+    ggplot(df, aes(x = depth, y = color)) +
+      geom_density_ridges(scale = 10)
+
+![Figure 6. Ridgeline plot with scale = 10.](/images/notes/ridge_plots/figure6.png)
+
+*Figure 6. Expanded ridge spacing.*
+
+---
+
+### Alternative statistic: stat = "binline"
+
+You can switch the statistic used for the ridge geometry.
+
+    ggplot(df, aes(x = depth, y = color)) +
+      geom_density_ridges(stat = "binline")
+
+![Figure 7. Ridgeline plot using binned line statistic.](/images/notes/ridge_plots/figure7.png)
+
+*Figure 7. Ridgeline plot using `stat = "binline"`.*
+
+---
+
+## 3) Styling and colors
+
+### Single fill color and transparency
+
+    ggplot(df, aes(x = depth, y = color)) +
+      geom_density_ridges(fill = "lightblue", alpha = 0.5)
+
+![Figure 8. Ridgeline plot with uniform fill color.](/images/notes/ridge_plots/figure8.png)
+
+*Figure 8. Uniform fill color with transparency.*
+
+---
+
+### Line style (color, linetype, linewidth)
+
+    ggplot(df, aes(x = depth, y = color)) +
+      geom_density_ridges(fill = "white",
+                          color = 4,
+                          linetype = 2,
+                          lwd = 1.5)
+
+![Figure 9. Ridgeline plot with custom line style.](/images/notes/ridge_plots/figure9.png)
+
+*Figure 9. Customized ridge outline style.*
+
+---
+
+### Fill by category
+
+Map `fill` to the category variable to color each ridge group.
+
+    ggplot(df, aes(x = depth, y = color, fill = color)) +
+      geom_density_ridges()
+
+![Figure 10. Ridgeline plot filled by category.](/images/notes/ridge_plots/figure10.png)
+
+*Figure 10. Fill mapped to category (color).*
+
+To set exact colors, use `scale_fill_manual()`:
+
+    ggplot(df, aes(x = depth, y = color, fill = color)) +
+      geom_density_ridges() +
+      scale_fill_manual(values = c("red","orange","yellow","green","cyan","blue","purple"))
+
+![Figure 11. Ridgeline plot with manual color palette.](/images/notes/ridge_plots/figure11.png)
+
+*Figure 11. Manual fill palette using `scale_fill_manual()`.*
+
+---
+
+### Gradient fill along the x-axis
+
+Use a gradient fill mapped to the x-value:
+
+    ggplot(df, aes(x = depth, y = color, fill = stat(x))) +
+      geom_density_ridges_gradient() +
+      scale_fill_viridis_c(name = "Depth", option = "C")
+
+![Figure 12. Ridgeline plot with gradient fill.](/images/notes/ridge_plots/figure12.png)
+
+*Figure 12. Gradient fill using `geom_density_ridges_gradient()`.*
+
+---
+
+### Quantile-based coloring
+
+You can color ridge segments by quantile ranges using `stat_density_ridges()` with ECDF.
+
+    ggplot(df, aes(x = depth, y = color, fill = stat(quantile))) +
+      stat_density_ridges(quantile_lines = FALSE,
+                          calc_ecdf = TRUE,
+                          geom = "density_ridges_gradient") +
+      scale_fill_brewer(name = "")
+
+![Figure 13. Ridgeline plot colored by quantiles.](/images/notes/ridge_plots/figure13.png)
+
+*Figure 13. Quantile-based fill using ECDF.*
+
+---
+
+### Highlight distribution tails
+
+This approach can highlight tails by choosing quantiles (e.g., 5% and 95%) and assigning different colors.
+
+    ggplot(df, aes(x = depth, y = color, fill = stat(quantile))) +
+      stat_density_ridges(quantile_lines = TRUE,
+                          calc_ecdf = TRUE,
+                          geom = "density_ridges_gradient",
+                          quantiles = c(0.05, 0.95)) +
+      scale_fill_manual(name = "Prob.",
+                        values = c("#E2FFF2", "white", "#B0E0E6"),
+                        labels = c("(0, 5%]", "(5%, 95%]", "(95%, 1]"))
+
+![Figure 14. Ridgeline plot highlighting tails.](/images/notes/ridge_plots/figure14.png)
+
+*Figure 14. Tail highlighting using selected quantiles.*
+
+---
+
+## Notes
+
+- For very small sample sizes, density shapes can be unstable; use more data if possible.
+- If ridges overlap too much, reduce `scale` or increase the y-axis spacing (or use fewer groups).
+- When using gradient or quantiles, keep legends simple so the plot stays readable.
 
 ---
 
 ## Further reading
 
-- [rollapply() in the zoo package](https://search.r-project.org/CRAN/refmans/zoo/html/rollapply.html?sessionid=)
+- ggridges CRAN page:  
+  https://cran.r-project.org/package=ggridges
 
 END
