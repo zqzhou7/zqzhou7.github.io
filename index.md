@@ -89,32 +89,43 @@ I study how **temporal structure of environmental extremes** shapes **benthic in
 .zq-card{
   position: relative;
   overflow: hidden;
-  border-radius: 18px;
-  padding: 18px 18px 16px 18px;
+  border-radius: 20px;
+  padding: 20px 20px 18px 20px;
 
-  background: rgba(255,255,255,0.64);
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.75),
+    rgba(255,255,255,0.55)
+  ) !important;
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.45);
 
-  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
 /* Glass sheen */
 .zq-card::before{
   content:"";
   position:absolute;
-  inset: 0;
+  inset:0;
   pointer-events:none;
-  border-radius: 18px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.55),
-    rgba(255,255,255,0.00) 42%
-  );
-  opacity: 0.55;
+  border-radius:20px;
+
+  background:
+    radial-gradient(
+      120% 60% at 10% 0%,
+      rgba(255,255,255,0.75),
+      rgba(255,255,255,0.0) 60%
+    );
+
+  opacity:0.6;
 }
 
 .zq-card:hover{
@@ -207,9 +218,19 @@ I study how **temporal structure of environmental extremes** shapes **benthic in
 
 /* Dark mode */
 html[data-theme="dark"] .zq-card{
-  background: rgba(18, 18, 22, 0.58);
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: 0 18px 48px rgba(0,0,0,0.55);
+  background: linear-gradient(
+    180deg,
+    rgba(28,28,34,0.78),
+    rgba(18,18,22,0.62)
+  ) !important;
+
+  border: 1px solid rgba(255,255,255,0.14);
+
+  box-shadow:
+    0 22px 60px rgba(0,0,0,0.65),
+    inset 0 1px 0 rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(26px) saturate(140%);
 }
 html[data-theme="dark"] .zq-card::before{
   background: linear-gradient(
