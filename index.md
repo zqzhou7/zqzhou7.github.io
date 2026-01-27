@@ -240,4 +240,3 @@ html[data-theme="dark"] .zq-card[data-accent] .zq-icon{
   box-shadow: 0 14px 30px rgba(var(--zq-accent), 0.14);
 }
 </style>
- 
