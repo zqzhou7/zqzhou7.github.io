@@ -6,7 +6,7 @@ author_profile: true
 classes: wide
 ---
 
-## Featured research themes
+# Featured research themes
 
 I study how **temporal structure of environmental extremes** shapes **benthic invertebrate performance and variability**, combining **mesocosm experiments**, **behavioural/physiological measurements**, and **mechanistic/statistical modelling**.
 
