@@ -129,9 +129,10 @@ I study how **temporal structure of environmental extremes** shapes **benthic in
 }
 
 .zq-card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.10);
-  border-color: rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+  box-shadow:
+    0 26px 70px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.7);
 }
 
 /* Make entire card clickable, remove underline everywhere */
