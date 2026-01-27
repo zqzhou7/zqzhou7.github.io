@@ -3,10 +3,9 @@ title: "[Blog] Spatial and Thermal-Stress Dynamics of Native and Introduced Biva
 date: 2026-01-27
 categories: [Blog]
 tags: [bivalves, heatwaves, invasions, spatial ecology, mesocosm, R]
-excerpt: "A unified R workflow links long-term survey maps and mesocosm survival to explain why compound climate extremes can favor an introduced bivalve over a native competitor."
 ---
 
-*This post documents an end-to-end R workflow that combines long-term benthic surveys (Eastern Scheldt) with mesocosm survival experiments to compare a native cockle (*Cerastoderma edule*) and an introduced Manila clam (*Ruditapes philippinarum*) under compound thermal and salinity stress.*
+*This post documents an end-to-end R workflow that combines long-term benthic surveys (Eastern Scheldt) with mesocosm survival experiments to compare a native cockle and an introduced Manila clam under compound thermal and salinity stress.*
 
 ---
 
@@ -944,7 +943,7 @@ dev.off()
 
 ## Citation
 
-Zhou et al. (2025). *Compound extreme events reshuffle the stacked odds in the gamble between native and introduced bivalves*. Global Ecology and Conservation. https://doi.org/10.1016/j.gecco.2025.e03918
+Zhou et al. (2025). *Compound extreme events reshuffle the stacked odds in the gamble between native and introduced bivalves*. Global Ecology and Conservation. [DOI](https://doi.org/10.1016/j.gecco.2025.e03918)
 
 ---
 
@@ -952,3 +951,4 @@ Zhou et al. (2025). *Compound extreme events reshuffle the stacked odds in the g
 
 All scripts, analyses, and derived figures are intended for **academic and non-commercial research use only**. Commercial use or public redistribution requires explicit written permission from the authors. Additional restrictions may apply to the original monitoring dataset curated by Rijkswaterstaat / WMR.
 
+Please cite the original publication when using any part of this work.
