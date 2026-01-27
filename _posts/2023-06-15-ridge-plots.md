@@ -217,7 +217,6 @@ This approach can highlight tails by choosing quantiles (e.g., 5% and 95%) and a
 
 ## Further reading
 
-- ggridges CRAN page:  
-  https://cran.r-project.org/package=ggridges
+- [ggridges CRAN page](https://cran.r-project.org/package=ggridges)
 
 END
