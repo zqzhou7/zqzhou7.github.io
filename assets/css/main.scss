@@ -42,19 +42,19 @@
     "vendor/font-awesome/brands"
 ;
 
-/* Center top navigation menu */
+/* Center navigation in air theme (safe fix) */
 
 .masthead__menu {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 .masthead__menu ul {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  display: inline-block;
+  float: none;
 }
 
 .masthead__menu-item {
   float: none;
+  display: inline-block;
 }
+
