@@ -22,7 +22,7 @@ In this demo:
 - Each food source has a dashed circle showing its detection radius.
 - When the urchin path intersects a detection circle, the model transitions into cue-following.
 
-![Demo animation](output.gif)
+![Demo animation](/images/blogs/urchin_movement/output.gif)
 
 ---
 
@@ -223,7 +223,7 @@ urchin_movement_stopping <- simulate_urchin_movement_towards_food_stopping(
 ## Plot + animate (gganimate)
 
 **Notes**
-- Put your urchin PNG (e.g., `sea_urchin2.png`) in the working directory, or provide a full path.
+- Put your urchin PNG (e.g., `sea_urchin2.png`) in the working directory, or provide a full path. Download a sample image from [here](/images/blogs/urchin_movement/sea_urchin2.png).
 - The output GIF is saved as `output.gif`.
 
 ```r
@@ -300,4 +300,4 @@ gganimate::anim_save("output.gif", animation)
 
 ## Further reading
 
-- Lévy walks: <https://en.wikipedia.org/wiki/L%C3%A9vy_flight>
+- [Lévy walks](https://en.wikipedia.org/wiki/L%C3%A9vy_flight)
