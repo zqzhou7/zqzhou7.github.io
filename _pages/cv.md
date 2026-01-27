@@ -9,6 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
+<a href="/files/ZhengquanZhou_CV.pdf" target="_blank" class="btn btn--primary">
+Download CV (PDF)
+</a>
+
 ## Education
 **Ph.D. in Marine Ecology**, Utrecht University, The Netherlands  
 2018 – 2023  
