@@ -34,16 +34,25 @@ I study how **temporal structure of environmental extremes** shapes **benthic in
     <div class="zq-meta">Focus: mobility traits · sediment mixing · ecosystem feedbacks</div>
   </a>
 
-  <a class="zq-card zq-card-link" data-accent="mint" href="https://doi.org/10.1016/j.gecco.2025.e03918" target="_blank" rel="noopener" aria-label="Compound extremes & invasion outcomes (opens in new tab)">
-    <div class="zq-card__top">
-      <span class="zq-icon" aria-hidden="true">📈</span>
-      <span class="zq-pill">Compound extremes &amp; invasion outcomes</span>
-    </div>
-    <div class="zq-body">
-      How compound extreme events shift survival and behaviour trade-offs between native and introduced bivalves.
-    </div>
-    <div class="zq-meta">Focus: compound events · mortality · burrowing behaviour · establishment windows</div>
-  </a>
+<a class="zq-card zq-card-link" data-accent="mint" 
+   href="https://doi.org/10.1016/j.gecco.2025.e03918" 
+   target="_blank" rel="noopener"
+   aria-label="Variability & thresholds (opens in new tab)">
+
+  <div class="zq-card__top">
+    <span class="zq-icon" aria-hidden="true">📈</span>
+    <span class="zq-pill">Variability &amp; thresholds</span>
+  </div>
+
+  <div class="zq-body">
+    Exploring how environmental stress intensity and temporal structure shape variability, resilience, and nonlinear responses in marine organisms.
+  </div>
+
+  <div class="zq-meta">
+    Focus: response heterogeneity · tipping points · performance stability under extremes
+  </div>
+
+</a>
 
   <a class="zq-card zq-card-link" data-accent="violet" href="https://github.com/zqzhou7" target="_blank" rel="noopener" aria-label="Reproducible workflows on GitHub (opens in new tab)">
     <div class="zq-card__top">
