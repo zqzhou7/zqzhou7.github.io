@@ -41,20 +41,3 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-
-/* Center navigation in air theme (safe fix) */
-
-.masthead__menu {
-  text-align: center;
-}
-
-.masthead__menu ul {
-  display: inline-block;
-  float: none;
-}
-
-.masthead__menu-item {
-  float: none;
-  display: inline-block;
-}
-
