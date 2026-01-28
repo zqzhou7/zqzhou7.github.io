@@ -1,6 +1,6 @@
 ---
-title: "From Spawning to Settlement: Cultivating Sea Urchin Larvae Under Heat and Salinity Stress"
-date: 2025-12-20
+title: "[Blog] From Spawning to Settlement: Cultivating Sea Urchin Larvae"
+date: 2026-01-09
 categories: [Blog]
 ---
 
@@ -12,7 +12,7 @@ categories: [Blog]
 
 Adult sea urchins (*Heliocidaris crassispina*) were induced to spawn using **potassium chloride (KCl) injection**, a standard method for stimulating gamete release.
 
-A sterile syringe was used to inject approximately **1–2 mL of 0.5 M KCl solution** into the coelomic cavity through the peristomial membrane.
+A sterile syringe was used to inject approximately **1 mL of 1.0 M KCl solution** into the coelomic cavity through the peristomial membrane.
 
 Within minutes, individuals began releasing gametes:
 
