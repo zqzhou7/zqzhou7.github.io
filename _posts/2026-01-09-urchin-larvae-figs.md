@@ -4,7 +4,7 @@ date: 2026-01-09
 categories: [Blog]
 ---
 
-*This experiment followed sea urchins from induced spawning through fertilization, larval development, metamorphosis, and juvenile formation under controlled temperature and salinity treatments. The post documents each stage of the cultivation process, highlighting both experimental techniques and organismal responses.*
+*This post followed sea urchins from induced spawning through fertilization, larval development, metamorphosis, and juvenile formation under controlled temperature and salinity treatments. The post documents each stage of the cultivation process, highlighting both experimental techniques and organismal responses.*
 
 ---
 
