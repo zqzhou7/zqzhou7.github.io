@@ -1,6 +1,6 @@
 ---
 title: "From Spawning to Settlement: Cultivating Sea Urchin Larvae Under Heat and Salinity Stress"
-date: 2025-XX-XX
+date: 2025-01-28
 categories: [Blog]
 ---
 
