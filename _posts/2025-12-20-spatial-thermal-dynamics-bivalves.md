@@ -1,6 +1,6 @@
 ---
 title: "[Blog] Spatial and Thermal-Stress Dynamics of Native and Introduced Bivalves in the Eastern Scheldt"
-date: 2026-01-27
+date: 2025-12-20
 categories: [Blog]
 tags: [bivalves, heatwaves, invasions, spatial ecology, mesocosm, R]
 ---
