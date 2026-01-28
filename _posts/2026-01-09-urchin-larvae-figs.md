@@ -82,13 +82,13 @@ After several days, larvae developed characteristic skeletal arms, marking the p
 
 ---
 
-## Four-arm larval stage
+## Six-arm larval stage
 
 With continued growth and feeding, larvae extended additional arms and increased in size.
 
-![Four-arm larvae](/images/blogs/urchin_larvae/four_arms.jpg)
+![Six-arm larvae](/images/blogs/urchin_larvae/six_arms.jpg)
 
-*Figure 6. Four-arm larvae showing advanced skeletal development.*
+*Figure 6. Six-arm larvae showing advanced skeletal development.*
 
 ---
 
