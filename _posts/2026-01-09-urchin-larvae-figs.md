@@ -64,11 +64,17 @@ Following fertilization, embryos were maintained in gently aerated culture vesse
 - Temperature treatments  
 - Salinity treatments  
 
-Cleavage occurred rapidly, progressing from two-cell stages to blastula and gastrula forms.
+Cleavage occurred rapidly and synchronously, with embryos progressing through a series of well-defined developmental stages from early cell division to gastrulation (Figure 4).
 
 ![Early embryo stages](/images/blogs/urchin_larvae/embryos.jpg)
 
-*Figure 4. Early embryonic development stages.*
+*Figure 4. Early embryonic development stages.* 
+(A) Two-cell stage shortly after the first cleavage division, showing two equal-sized blastomeres within the fertilization envelope.
+(B) Four-cell stage following the second cleavage, with blastomeres arranged symmetrically.
+(C) Eight-cell stage as continued cleavage increases cell number and reduces individual cell size.
+(D) Sixteen-cell stage, marking the transition toward more compact cellular organization.
+(E) Blastula stage, characterized by a spherical embryo with a developing blastocoel and a smooth outer cell layer.
+(F) Gastrula stage, showing clear morphological differentiation and the onset of gastrulation with tissue invagination.
 
 ---
 
