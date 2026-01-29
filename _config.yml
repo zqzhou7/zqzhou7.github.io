@@ -148,9 +148,13 @@ og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type: Person
+  name: Zhengquan Zhou
+  links:
+    - https://orcid.org/0000-0002-6422-8288
+    - https://scholar.google.com/citations?user=WdBBxqjsEowC&hl=en&oi=ao
+    - https://github.com/zqzhou7
+    - https://www.linkedin.com/in/zhengquan-zhou-b6394b223/
 
 
 # Analytics
