@@ -10,7 +10,7 @@ categories: [Blog]
 
 ## Inducing spawning
 
-Adult sea urchins (*Heliocidaris crassispina*) were induced to spawn using **potassium chloride (KCl) injection**, a standard method for stimulating gamete release.
+Adult purple sea urchins (*Heliocidaris crassispina*) were induced to spawn using **potassium chloride (KCl) injection**, a standard method for stimulating gamete release.
 
 A sterile syringe was used to inject approximately **1 mL of 1.0 M KCl solution** into the coelomic cavity through the peristomial membrane.
 
