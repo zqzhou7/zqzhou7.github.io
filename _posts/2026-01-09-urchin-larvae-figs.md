@@ -110,7 +110,7 @@ This process involved:
 - Formation of radial symmetry  
 - Development of juvenile structures  
 
-![Larvae undergoing metamorphosis](/images/blogs/urchin_larvae/metamorphosis.jpg)
+![Larvae undergoing metamorphosis](/images/blogs/urchin_larvae/metamorphosis.gif)
 
 *Figure 7. Metamorphic transition from larva to juvenile.*
 
@@ -158,6 +158,10 @@ Culturing sea urchins across complete developmental cycles provides direct insig
 - Settlement success  
 
 The images presented here reflect both the technical process and the biological consequences of climate-driven stressors.
+
+---
+
+— End of post —
 
 ---
 
