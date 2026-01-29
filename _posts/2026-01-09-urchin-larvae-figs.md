@@ -100,6 +100,8 @@ With continued growth and feeding, larvae extended additional arms and increased
 
 ## Metamorphosis
 
+### Settlement and metamorphic transition
+
 Competent larvae eventually settled onto suitable surfaces and initiated metamorphosis.
 
 This process involved:
@@ -159,4 +161,7 @@ The images presented here reflect both the technical process and the biological 
 
 ---
 
-END
+*Copyright notice:*  
+© 2026 Zhengquan Zhou. All images and figures presented in this blog are the intellectual property of the author and are protected by copyright. Unauthorized reproduction or distribution is prohibited without written permission. Academic and educational use is permitted with proper citation of this page.
+
+---
