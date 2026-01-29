@@ -112,6 +112,17 @@ This process involved:
 
 *Figure 7. Metamorphic transition from larva to juvenile.*
 
+### Abnormal metamorphosis under thermal and salinity stress
+
+Under combined temperature and salinity treatments, a subset of larvae exhibited abnormal or incomplete metamorphosis (Figure 8). These individuals showed disrupted morphological transitions, including irregular body shapes, partial reabsorption of larval structures, and malformed juvenile features.
+
+Such abnormalities suggest that environmental stress during early development can interfere with the tightly regulated processes of settlement and tissue reorganization, potentially reducing post-settlement survival and recruitment success.
+
+![Abnormal metamorphic development](/images/blogs/urchin_larvae/abnormal_metamorph.gif)
+
+*Figure 8. Abnormal metamorphic development under combined temperature and salinity treatments.*
+Larvae exposed to elevated temperature and altered salinity showed incomplete or abnormal metamorphic transitions. In this image, two individuals appear to be partially fused, suggesting strong developmental disturbance under stress conditions.
+
 ---
 
 ## Juvenile sea urchins
@@ -120,7 +131,7 @@ Following metamorphosis, individuals developed into benthic juveniles with visib
 
 ![Juvenile sea urchin](/images/blogs/urchin_larvae/juvenile.jpg)
 
-*Figure 8. Newly formed juvenile sea urchins.*
+*Figure 9. Newly formed juvenile sea urchins.*
 
 ---
 
