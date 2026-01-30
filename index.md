@@ -8,7 +8,7 @@ classes: wide
 
 # Featured research themes
 
-Exploring how **the temporal structure of environmental extremes** shapes **benthic invertebrate performance and variability**, integrating **experiments**, **physiological measurements**, and **statistical modelling**. 
+Exploring how **environmental extremes** shapes **benthic invertebrate performance and variability**, integrating **experiments**, **physiological measurements**, and **statistical modelling**. 
 
 <div class="zq-grid">
 
