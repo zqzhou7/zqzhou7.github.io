@@ -127,11 +127,26 @@ Li, B., Li, X., Bouma, T. J., Soissons, L. M., Cozzoli, F., Wang, Q., **Zhou, Z.
 - **International Temperate Reefs Symposium (ITRS)**, 2025  
   *Oral presentation; ITRS Committee*
 
+- **International Symposium on Marine Science & Technology (ISMST)**, 2025
+  *Oral presentation; Zhejiang Ocean University*
+
 - **NWO-Life Conference**, 2023  
   *Prompt talk and poster presentation; Dutch Research Council*
 
+- **NCK Days**, 2023
+  *Oral presentation; Netherlands Centre for Coastal Research*
+
 - **International Symposium on Coastal Resources and Environment (CORE)**, 2021  
   *Oral presentation; International Association of Hydro-Environment Engineering and Research (IAHR)*
+
+- **Graduate Forum on Marine Life Sciences & Shandong Provincial Summer School for Marine Life Sciences Graduate Students**, 2017
+  *Oral presentation (Chinese); Bureau of Frontier Sciences and Education, Chinese Academy of Sciences & Department of Education of Shandong Province*
+
+- **The 12th National Symposium on Biodiversity Science and Conservation**, 2016
+  *Poster presentation; Bureau of Science and Technology for Development, Chinese Academy of Sciences & Biodiversity Committee of the Chinese Academy of Sciences*
+
+- **Symposium on Oceanography and Limnology under Global Change: Regional Responses and the Future Ocean**, 2016
+  *Poster presentation; Chinese Society for Oceanology and Limnology & Nanjing Institute of Geography and Limnology, Chinese Academy of Sciences*
 
 ---
 
@@ -175,5 +190,7 @@ Li, B., Li, X., Bouma, T. J., Soissons, L. M., Cozzoli, F., Wang, Q., **Zhou, Z.
 
 ## Awards & Certifications
 - Academician Liu Ruiyu Marine Science Scholarship (2018)  
-- Outstanding Student Leader Award, University of Chinese Academy of Sciences (2018)  
+- Outstanding Student Leader Award, University of Chinese Academy of Sciences (2018)
+- Excellent Report Award, Graduate Forum on Marine Life Sciences, Chinese Academy of Sciences (2017)
+- First Place Award, Shandong Provincial Undergraduate Science & Technology English Contest (2014)
 - Cambridge Business English Certificate — C1  
