@@ -26,6 +26,9 @@ Download CV (PDF)
 ---
 
 ## Academic Positions
+**Postdoctoral Fellow**, Linnaeus University  
+2026 –  
+
 **Postdoctoral Researcher**, The University of Hong Kong  
 2023 – 2025  
 
