@@ -26,10 +26,10 @@ Download CV (PDF)
 ---
 
 ## Academic Positions
-**Postdoctoral Fellow**, Linnaeus University, Sweden
+**Postdoctoral Fellow**, Linnaeus University, Sweden  
 2026 – Current
 
-**Postdoctoral Researcher**, The University of Hong Kong, Hong Kong SAR, China
+**Postdoctoral Researcher**, The University of Hong Kong, Hong Kong SAR, China  
 2023 – 2025  
 
 **Research Assistant**, Royal Netherlands Institute for Sea Research (NIOZ), The Netherlands  
