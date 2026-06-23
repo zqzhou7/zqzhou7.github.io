@@ -64,7 +64,7 @@ Li, X., Chen, L., **Zhou, Z.**, *et al.*
 ## 2019
 **Zhou, Z.**, Li, X., Chen, L., *et al.*  
 **Effects of diesel oil spill on macrobenthic assemblages at the intertidal zone.**  
-*Marine Environmental Research*, 152, 104823.
+*Marine Environmental Research*, 152, 104823.  
 [DOI](https://doi.org/10.1016/j.marenvres.2019.104823)
 
 Yang, L., Chen, L., Li, X., **Zhou, Z.**, *et al.*  
@@ -80,7 +80,7 @@ Li, B., Bouma, T. J., **Zhou, Z.**, *et al.*
 ## 2018
 **Zhou, Z.**, Li, X., Chen, L., *et al.*  
 **Macrobenthic assemblage characteristics under stressed waters and ecological health assessment using AMBI and M-AMBI: a case study at the Xin’an River Estuary, Yantai, China**  
-*Acta Oceanologica Sinica*, 37(5), 77–86.
+*Acta Oceanologica Sinica*, 37(5), 77–86.  
 [DOI](https://doi.org/10.1007/s13131-018-1180-x)
 
 Li, B., **Zhou, Z.**, *et al.*  
