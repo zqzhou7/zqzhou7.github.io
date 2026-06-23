@@ -65,6 +65,7 @@ Li, X., Chen, L., **Zhou, Z.**, *et al.*
 **Zhou, Z.**, Li, X., Chen, L., *et al.*  
 **Effects of diesel oil spill on macrobenthic assemblages at the intertidal zone.**  
 *Marine Environmental Research*, 152, 104823.
+[DOI](https://doi.org/10.1016/j.marenvres.2019.104823)
 
 Yang, L., Chen, L., Li, X., **Zhou, Z.**, *et al.*  
 **Effect of seasonal hypoxia on macrobenthic communities in the Muping Marine Ranch.**  
@@ -78,8 +79,9 @@ Li, B., Bouma, T. J., **Zhou, Z.**, *et al.*
 
 ## 2018
 **Zhou, Z.**, Li, X., Chen, L., *et al.*  
-**Macrobenthic assemblage characteristics under stressed waters using AMBI and M-AMBI.**  
+**Macrobenthic assemblage characteristics under stressed waters and ecological health assessment using AMBI and M-AMBI: a case study at the Xin’an River Estuary, Yantai, China**  
 *Acta Oceanologica Sinica*, 37(5), 77–86.
+[DOI](https://doi.org/10.1007/s13131-018-1180-x)
 
 Li, B., **Zhou, Z.**, *et al.*  
 **Size distribution and reproductive cycle of Asterias amurensis in China.**  
@@ -99,14 +101,10 @@ Li, X., **Zhou, Z.**, Chen, L., *et al.*
 ---
 
 ## 2016
-Chen, L. L., Wang, Q. C., Li, X. J., **Zhou, Z. Q.**, & Li, B. Q.  
+Chen, L., Wang, Q., Li, X., **Zhou, Z.**, & Li, B.  
 **Long-term trends of macrobenthos in southern Bohai Sea.**  
 *Scientia Sinica Vitae*, 46(9), 1121–1134.
 
 Li, X., **Zhou, Z.**, Chen, L., & Li, B.  
 **Characteristics of macrobenthic communities in the estuary of the Dagujia River and adjacent waters in Yantai, Shandong, China.**  
 *Biodiversity Science*, 24(2), 157–165.
-
-Li, B., Li, X., **Zhou, Z.**, *et al.*  
-**Ecological effects of reclamation on benthic communities.**  
-*Guangxi Sciences*, 23(4), 293–298.
