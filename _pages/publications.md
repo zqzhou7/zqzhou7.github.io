@@ -21,7 +21,7 @@ You can also find my publications on
 **Zhou, Z.**, Grandjean, T. J., de Smit, J., van Belzen, J., Fivash, G. S., Walles, B., *et al.*  
 **Sediment dynamics shape macrofauna mobility traits and abundance on tidal flats.**  
 *Limnology and Oceanography*, 69(10), 2278–2293.  
-[DOI](https://doi.org/10.1002/lno.12500)
+[DOI](https://doi.org/10.1002/lno.12669)
 
 Lehuen, A., Oulhen, R.-M., **Zhou, Z.**, *et al.*  
 **Multispecies macrozoobenthic seasonal bioturbation effect on sediment erodibility.**  
