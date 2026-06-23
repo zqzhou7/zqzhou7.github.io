@@ -52,10 +52,6 @@ Download CV (PDF)
 **Compound extreme events reshuffle the stacked odds in the gamble between native and introduced bivalves.**  
 *Global Ecology and Conservation*, e03918.
 
-**Zhou, Z.**, Fivash, G. S., Cozzoli, F., Walles, B., Troost, K., Ysebaert, T., & Bouma, T. J. (2025).  
-**Bivalve mortality and burrowing behavior under compound stress of salinity and temperature: Data from a mesocosm experiment.**  
-*Data in Brief* (in preparation).
-
 Lehuen, A., Oulhen, R.-M., **Zhou, Z.**, de Smit, J., van IJzerloo, L., Cozzoli, F., Bouma, T. J., & Orvain, F. (2024).  
 **Multispecies macrozoobenthic seasonal bioturbation effect on sediment erodibility.**  
 *Journal of Sea Research*, 201, 102525.
