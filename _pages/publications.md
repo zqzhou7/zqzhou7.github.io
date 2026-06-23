@@ -38,7 +38,7 @@ PhD thesis, Utrecht University.
 **Zhou, Z.**, Steiner, N., Fivash, G. S., *et al.*  
 **Temporal dynamics of heatwaves are key drivers of sediment mixing by bioturbators.**  
 *Limnology and Oceanography*, 68(5), 1105–1116.  
-[DOI](https://doi.org/10.1002/lno.12420)
+[DOI](https://doi.org/10.1002/lno.12332)
 
 ---
 
